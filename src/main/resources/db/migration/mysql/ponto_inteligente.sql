@@ -1,3 +1,11 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: 30-Maio-2019 às 19:16
+-- Versão do servidor: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,7 +41,7 @@ CREATE TABLE `tbl_empresa` (
 --
 
 INSERT INTO `tbl_empresa` (`id`, `cnpj`, `data_atualizacao`, `data_criacao`, `razao_social`) VALUES
-(1, '07067536000173', '2019-04-24 08:57:40', '2019-04-24 08:57:40', '123456');
+(1, '28331847000178', '2019-05-29 11:57:54', '2019-05-29 11:57:54', '123456');
 
 -- --------------------------------------------------------
 
@@ -61,9 +69,9 @@ CREATE TABLE `tbl_funcionario` (
 --
 
 INSERT INTO `tbl_funcionario` (`id`, `cpf`, `data_atualizacao`, `data_criacao`, `email`, `nome`, `perfil`, `qtd_horas_almoco`, `qtd_horas_trabalho_dia`, `senha`, `valor_hora`, `empresa_id`) VALUES
-(1, '28450358027', '2019-04-24 08:57:41', '2019-04-24 08:57:41', 'admin@email.com', 'admin', 'ROLE_ADMIN', NULL, NULL, '$2a$10$SrhZwA/AmVKUa6Veq5GcB.vS0g3fxzmcIa38UQJI.bxH62diqYyEW', NULL, 1),
-(2, '42020617056', '2019-04-24 09:00:44', '2019-04-24 09:00:44', 'pf1@email.com', 'pf1', 'ROLE_USUARIO', NULL, NULL, '$2a$10$mhajnSEMcxjwwZlz00BZCeY1fgdYziw8VRNXNeRwFUgp6LIHvZWR.', '50.00', 1),
-(3, '74073684060', '2019-04-24 09:04:07', '2019-04-24 09:04:07', 'pf2@email.com', 'pf2', 'ROLE_USUARIO', NULL, NULL, '$2a$10$L6xTFCtsP8QYx1n/uXl3OeFNkbisj6tPs2PwgLRIjmTCE1pLRQ8Qu', '55.00', 1);
+(1, '46018492091', '2019-05-29 11:57:55', '2019-05-29 11:57:55', 'pj1@email.com', 'pj-1', 'ROLE_ADMIN', NULL, NULL, '$2a$10$Hj0ylBDxbp5dAh/DtonFQOzRPkuqHbPiTbyA0wOqOL4xEOaf6x2Nm', NULL, 1),
+(2, '791.471.090-33', '2019-05-29 12:36:13', '2019-05-29 12:36:13', 'pf-2@email.com', 'pf-2', 'ROLE_USUARIO', NULL, NULL, '$2a$10$QQynj/45fTOfXC71DYxp/umvR/y67NJiQoyccV.Lkt6j929yj87yy', '50.00', 1),
+(3, '386.380.100-87', '2019-05-29 14:42:54', '2019-05-29 12:36:57', 'pf-3@email.com', 'pf-33', 'ROLE_USUARIO', NULL, 8.5, '$2a$10$ubwrozuuJe1W7GAAqvvDLudiieH3AkCz/3j8ly8kRrNAMI2ZnqYgy', '80.00', 1);
 
 -- --------------------------------------------------------
 
@@ -87,10 +95,9 @@ CREATE TABLE `tbl_lancamento` (
 --
 
 INSERT INTO `tbl_lancamento` (`id`, `data`, `data_atualizacao`, `data_criacao`, `descricao`, `localizacao`, `tipo`, `funcionario_id`) VALUES
-(1, '2019-10-10 08:00:00', '2019-04-24 09:54:26', '2019-04-24 09:54:26', 'INICIO de trabalho', '1.12121.121212', 'INICIO_TRABALHO', 2),
-(2, '2019-10-10 12:00:00', '2019-04-24 09:54:26', '2019-04-24 09:54:26', 'INICIO de ALMOCO', '1.12121.121212', 'INICIO_ALMOCO', 2),
-(3, '2019-10-10 14:00:00', '2019-04-24 09:55:05', '2019-04-24 09:55:05', 'TERMINO de ALMOCO', '1.12121.121212', 'TERMINO_ALMOCO', 2),
-(4, '2019-10-10 18:00:00', '2019-04-24 09:55:44', '2019-04-24 09:55:44', 'TERMINO de TRABALHO', '1.12121.121212', 'TERMINO_TRABALHO', 2);
+(1, '0029-10-10 08:00:00', '2019-05-29 15:04:59', '2019-05-29 14:59:48', 'INICIO de TRABALHO', '1.12121.121212', 'INICIO_TRABALHO', 2),
+(2, '0029-10-10 01:06:00', '2019-05-29 15:00:56', '2019-05-29 15:00:56', 'INICIO de TRABALHO', '1.12121.121212', 'INICIO_ALMOCO', 2),
+(3, '0029-10-10 01:06:00', '2019-05-29 15:01:07', '2019-05-29 15:01:07', 'INICIO de TRABALHO', '1.12121.121212', 'TERMINO_ALMOCO', 2);
 
 --
 -- Indexes for dumped tables
@@ -136,7 +143,7 @@ ALTER TABLE `tbl_funcionario`
 -- AUTO_INCREMENT for table `tbl_lancamento`
 --
 ALTER TABLE `tbl_lancamento`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
