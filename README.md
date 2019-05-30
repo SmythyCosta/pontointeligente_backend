@@ -73,6 +73,7 @@
 	}
 	
 #### GET http://localhost:8080/api/lancamentos/1
+#### DELETE http://localhost:8080/api/lancamentos/{id}
 #### GET http://localhost:8080/api/lancamentos/funcionario/2?dir=ASC&pag=0
 
 #### POST http://localhost:8080/auth
@@ -80,3 +81,9 @@
     	"email": "pf2@email.com",
     	"senha": "123456"
 	}
+	
+
+## Swagger-ui
+```
+Ferramenta para acessar a api de forma mais interativa, http://localhost:8080/swagger-ui.html. Na classe SwaggerConfig deves configurar o usuario que ira ser autenticado para ser ajetado no Hearder das requisicoes.
+```
